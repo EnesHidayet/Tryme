@@ -9,12 +9,9 @@ import lombok.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "tbl_resimler")
-public class Resimler {
+public class Resim {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String anaResimUrl;
-    private String digerResimUrl1;
-    private String digerResimUrl2;
-    private String digerResimUrl3;
+    private String resimUrl;
 }

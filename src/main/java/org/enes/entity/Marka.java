@@ -3,6 +3,8 @@ package org.enes.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -15,6 +17,6 @@ public class Marka {
     private Long id;
     private String markaAdi;
 
-    @OneToOne
-    private Model model;
+    @ElementCollection
+    private List<Long> model;
 }

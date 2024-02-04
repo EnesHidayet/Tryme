@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.apache.catalina.LifecycleState;
 
+import java.util.List;
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -16,6 +18,6 @@ public class Kategori {
     private Long id;
     private String kategoriAdi;
 
-    @OneToOne
-    private AltKategori altKategori;
+    @ElementCollection
+    private List<Long> altKategori;
 }
